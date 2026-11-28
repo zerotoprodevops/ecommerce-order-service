@@ -38,11 +38,11 @@ pipeline{
     }
     post{
         success{
-            echo "Build $TAG Successful - Image pushed to DockerHub"
-            sh "docker rmi $IMAGE:$TAG $IMAGE:latest || echo 'cleanup: Image not found locally'"
+            echo "Build ${TAG} Successful - Image pushed to DockerHub"
+            sh "docker rmi ${IMAGE}:${TAG} ${IMAGE}:latest || echo 'cleanup: Image not found locally'"
         }
         failure{
-            echo "Pipeline failed - Image $IMAGE:$TAG kept locally for debugging"
+            echo "Pipeline failed - Image ${IMAGE}:${TAG} kept locally for debugging"
         }
     }
 
