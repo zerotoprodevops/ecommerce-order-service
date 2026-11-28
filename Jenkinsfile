@@ -1,5 +1,5 @@
 pipeline{
-    agent {label build-vm}
+    agent {label 'build-vm'}
     environment{
         IMAGE = 'jyotimanab/ecommerce-order-service'
         TAG = "${env.BUILD_NUMBER}"
