@@ -39,7 +39,7 @@ pipeline{
     post{
         success{
             echo "Build ${TAG} successful - Image ${IMAGE} uploaded to Docker hub successfully"
-            sh "docker rmi ${IMAGE}:${TAG} ${IMAGE}:latest || echo 'Image cleanup - Image ${IMAGE} not found locally '"
+            sh "docker rmi ${IMAGE}:${TAG} ${IMAGE}:latest || echo 'Image cleanup - Image not found locally '"
 
             
         }
