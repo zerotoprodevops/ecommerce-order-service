@@ -44,9 +44,9 @@ pipeline{
             
         }
         failure{
-            echo "Pipeline failed - ${IMAGE}:${TAG} left locally for debugging"
-            
+            echo "Build Failed - ${IMAGE}:${TAG} kept locally for debuggings "
         }
+        
     }
 
 }
